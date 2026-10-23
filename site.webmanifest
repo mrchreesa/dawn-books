@@ -1,0 +1,11 @@
+{
+  "name": "The Dawn Treader Book Shop",
+  "short_name": "Dawn Treader",
+  "icons": [
+    { "src": "assets/icons/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#0b1a14",
+  "background_color": "#0b1a14",
+  "display": "browser"
+}

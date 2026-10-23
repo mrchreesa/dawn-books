@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Dawn Treader Book Shop | Used &amp; rare books in Ann Arbor</title>
+  <meta name="description" content="Used and rare books, maps and prints, bought and sold on East Liberty Street in Ann Arbor since 1976. More than 70,000 titles, from fifty-cent paperbacks to incunabula.">
+  <meta name="theme-color" content="#0b1a14">
+  <link rel="canonical" href="__SITE_URL__/rare-room/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Dawn Treader Book Shop">
+  <meta property="og:title" content="The Dawn Treader Book Shop, Ann Arbor">
+  <meta property="og:description" content="Step into the shop and out of the noise. Used and rare books bought and sold on East Liberty Street since 1976.">
+  <meta property="og:url" content="__SITE_URL__/rare-room/">
+  <meta property="og:image" content="__SITE_URL__/assets/og/rare-room.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Dawn Treader ship emblem in gold leaf on dark green, with the shop's name.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Dawn Treader Book Shop, Ann Arbor">
+  <meta name="twitter:description" content="Used and rare books bought and sold on East Liberty Street since 1976.">
+  <meta name="twitter:image" content="__SITE_URL__/assets/og/rare-room.jpg">
+
+  <link rel="icon" href="../assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="../assets/icons/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=IM+Fell+English:ital@0;1&family=IM+Fell+French+Canon&display=swap">
+  <link rel="preload" as="image" href="../assets/img/scene/shelves.webp">
+  <link rel="stylesheet" href="style.css">
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
+  <script defer src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" integrity="sha384-B2WBjDzEjJpYvhmi2UyEn7rektqkf5suS6sNoyyrf0EBAwBHdkiXxIlU0V5Ru2ed" crossorigin="anonymous"></script>
+  <script defer src="../assets/brand/wordmark.js"></script>
+  <script defer src="../assets/brand/emblem.js"></script>
+  <script defer src="../assets/brand/brand.js"></script>
+  <script defer src="main.js"></script>
+  <script>
+    // Hide the hero until the opening sequence takes over; never longer than 4s.
+    document.documentElement.classList.add('js', 'intro-pending');
+    setTimeout(function () { document.documentElement.classList.remove('intro-pending'); }, 4000);
+  </script>
+</head>
+<body>
+  <a class="skip" href="#story">Skip to content</a>
+
+  <!-- Gilt fills shared by every mark on the page -->
+  <svg class="defs" aria-hidden="true" focusable="false" width="0" height="0">
+    <defs>
+      <linearGradient id="gilt" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#f0d699"/>
+        <stop offset=".38" stop-color="#c9a24f"/>
+        <stop offset=".62" stop-color="#a98232"/>
+        <stop offset="1" stop-color="#d9b86d"/>
+      </linearGradient>
+      <linearGradient id="glint" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="996" y2="300" gradientTransform="translate(-1400 0)">
+        <stop offset="0" stop-color="#fff6d8" stop-opacity="0"/>
+        <stop offset=".44" stop-color="#fff6d8" stop-opacity="0"/>
+        <stop offset=".5" stop-color="#fff6d8" stop-opacity=".95"/>
+        <stop offset=".56" stop-color="#fff6d8" stop-opacity="0"/>
+        <stop offset="1" stop-color="#fff6d8" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <header class="nav" data-nav>
+    <a class="nav__brand" href="#top" aria-label="Dawn Treader Books, back to top">
+      <span data-shape="wordmark-line" data-fill="url(#gilt)"></span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#story">Our story</a>
+      <a href="#shelves">Five centuries</a>
+      <a href="#week">Book of the week</a>
+      <a href="#selling">Selling books</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="nav__cta" href="https://www.abebooks.com/dawn-treader-bookshop-ann-arbor-mi/9543/sf" target="_blank" rel="noopener">Rare stock online</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="nav__toggle-open">Menu</span><span class="nav__toggle-close">Close</span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <nav aria-label="Main, mobile">
+      <a href="#story">Our story</a>
+      <a href="#shelves">Five centuries</a>
+      <a href="#week">Book of the week</a>
+      <a href="#selling">Selling books</a>
+      <a href="#gift">Gift certificates</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <p class="menu__foot">
+      <a href="tel:+17349951008">734-995-1008</a><br>
+      <a href="https://www.abebooks.com/dawn-treader-bookshop-ann-arbor-mi/9543/sf" target="_blank" rel="noopener">Rare stock on AbeBooks</a>
+    </p>
+  </div>
+
+  <main>
+    <!-- Title page -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__shelves" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__vignette" aria-hidden="true"></div>
+
+      <div class="hero__inner">
+        <div class="hero__emblem" data-shape="emblem-draw" data-fill="url(#gilt)"></div>
+        <h1 class="hero__title" id="hero-title">Step into the shop and out of the noise.</h1>
+        <p class="hero__sub">Used and rare books, maps and prints in Ann&nbsp;Arbor since 1976. More than 70,000 titles, from fifty-cent paperbacks to books printed before 1501.</p>
+        <div class="hero__actions">
+          <a class="btn btn--gilt" href="#visit">Plan your visit</a>
+          <a class="btn btn--line" href="#selling">Sell us your books</a>
+        </div>
+      </div>
+
+      <p class="hero__imprint">
+        <span>514 East Liberty Street, Ann Arbor</span>
+        <span data-open-status>Open daily from 11am</span>
+      </p>
+    </section>
+
+    <!-- Story, set like a book page with shoulder notes -->
+    <section class="story" id="story" aria-labelledby="story-title">
+      <div class="story__page">
+        <aside class="story__notes" aria-label="Dates">
+          <p class="note"><span class="note__year">1976</span>Bill Gillmore opens the shop, in a tiny basement.</p>
+          <p class="note"><span class="note__year">2022</span>Africa Schaumann, the shop’s manager of four years, buys it.</p>
+        </aside>
+
+        <div class="story__text">
+          <h2 class="section-title" id="story-title">Ann Arbor’s best browse</h2>
+          <p class="ink" data-ink>For more than forty-five years the Dawn Treader has bought and sold books in Ann Arbor and around the world. It started in a tiny basement. Today it fills a roomy storefront on East Liberty Street with more than seventy thousand titles.</p>
+          <p class="story__body"><span class="dropcap">A</span>frica Schaumann’s expertise is rare and antiquarian books, and she is trained in book conservation and preservation. So the shelves run from this week’s paperbacks to books that have survived five centuries, at prices from fifty cents to many thousands of dollars.</p>
+        </div>
+      </div>
+
+      <figure class="quote">
+        <blockquote><p>“Best bookstore ever.”</p></blockquote>
+        <figcaption>LeVar Burton, on a <a href="https://www.annarbor.com/entertainment/actor-levar-burton-in-ann-arbor-and-apparently-enjoying-it/" target="_blank" rel="noopener">visit to Ann Arbor</a></figcaption>
+      </figure>
+    </section>
+
+    <!-- Timeline: a shelf that scrolls sideways -->
+    <section class="shelves" id="shelves" aria-labelledby="shelves-title">
+      <p class="shelves__year shelves__year--wide" aria-hidden="true" data-year>1440</p>
+      <div class="shelves__rail" data-rail>
+        <header class="shelves__intro">
+          <h2 class="section-title" id="shelves-title">Five and a half centuries on the shelves</h2>
+          <p class="shelves__lede">We buy books printed any time from Gutenberg’s day to this year. A few that have crossed our counter lately:</p>
+        </header>
+        <p class="shelves__year shelves__year--narrow" aria-hidden="true" data-year>1440</p>
+        <ol class="shelves__track" data-track>
+          <li class="plate plate--type" data-year="1440">
+            <div class="plate__art plate__art--letter" aria-hidden="true">G</div>
+            <p class="plate__year">c. 1440</p>
+            <h3 class="plate__title">Movable type</h3>
+            <p class="plate__note">Gutenberg begins printing in Mainz. Anything printed since, we’ll gladly look at.</p>
+          </li>
+          <li class="plate plate--type" data-year="1500">
+            <div class="plate__art plate__art--letter" aria-hidden="true">I</div>
+            <p class="plate__year">Before 1501</p>
+            <h3 class="plate__title">Incunabula</h3>
+            <p class="plate__note">Books from the first fifty years of printing. Rare, fragile, and now and then on our shelves.</p>
+          </li>
+          <li class="plate" data-year="1926">
+            <div class="plate__art"><img src="../assets/img/books/little-women-1.webp" alt="Little Women, 1926 Winston edition, green cloth with an illustrated cover, on the shop counter." width="900" height="1109" loading="lazy" decoding="async"></div>
+            <p class="plate__year">1926</p>
+            <h3 class="plate__title">Little Women</h3>
+            <p class="plate__by">Louisa May Alcott</p>
+            <p class="plate__note">First thus, John C. Winston, with watercolor plates by Tiffany glass designer Clara Miller Burd.</p>
+            <a class="plate__status" href="https://www.abebooks.com/first-edition/Little-Women-Alcott-Louisa-John-Winston/32397246260/bd" target="_blank" rel="noopener">Buy online</a>
+          </li>
+          <li class="plate" data-year="1928">
+            <div class="plate__art"><img src="../assets/img/books/christmas.webp" alt="A Christmas Book in its illustrated dust jacket, shelved between other old books." width="1000" height="967" loading="lazy" decoding="async"></div>
+            <p class="plate__year">1928</p>
+            <h3 class="plate__title">A Christmas Book</h3>
+            <p class="plate__by">D. B. Wyndham Lewis and G. C. Heseltine</p>
+            <p class="plate__note">First edition, J. M. Dent &amp; Sons. An anthology “for moderns”.</p>
+            <span class="plate__status plate__status--shop">Ask in the shop</span>
+          </li>
+          <li class="plate" data-year="1931">
+            <div class="plate__art"><img src="../assets/img/books/fatal-interview.webp" alt="Fatal Interview in plain grey boards standing on the shop counter." width="900" height="1350" loading="lazy" decoding="async"></div>
+            <p class="plate__year">1931</p>
+            <h3 class="plate__title">Fatal Interview</h3>
+            <p class="plate__by">Edna St. Vincent Millay</p>
+            <p class="plate__note">Signed first edition of her sonnet sequence. Harper &amp; Brothers.</p>
+            <a class="plate__status" href="https://www.abebooks.com/signed-first-edition/Fatal-Interview-Sonnets-Millay-Edna-Vincent/32126745991/bd" target="_blank" rel="noopener">Buy online</a>
+          </li>
+          <li class="plate" data-year="1968">
+            <div class="plate__art"><img src="../assets/img/books/charlie-2.webp" alt="You’re in Love, Charlie Brown, pale blue cover with Charlie Brown and Linus in a field." width="1100" height="1002" loading="lazy" decoding="async"></div>
+            <p class="plate__year">1968</p>
+            <h3 class="plate__title">You’re in Love, Charlie Brown</h3>
+            <p class="plate__by">Charles M. Schulz</p>
+            <p class="plate__note">First edition, World Publishing, from the 1967 television special.</p>
+            <span class="plate__status plate__status--sold">Sold</span>
+          </li>
+          <li class="plate" data-year="1974">
+            <div class="plate__art"><img src="../assets/img/books/beale-front.webp" alt="The yellow dust jacket of If Beale Street Could Talk." width="560" height="700" loading="lazy" decoding="async"></div>
+            <p class="plate__year">1974</p>
+            <h3 class="plate__title">If Beale Street Could Talk</h3>
+            <p class="plate__by">James Baldwin</p>
+            <p class="plate__note">First edition of Baldwin’s fifth novel. The Dial Press.</p>
+            <a class="plate__status" href="https://www.abebooks.com/first-edition/Beale-Street-Talk-Baldwin-James-Dial/32329886234/bd" target="_blank" rel="noopener">Buy online</a>
+          </li>
+          <li class="plate plate--mark" data-year="1976">
+            <div class="plate__art"><img src="../assets/img/books/bedbook.webp" alt="The Bed Book, a starry blue cover with children flying in a bed, on the shop counter." width="1000" height="1322" loading="lazy" decoding="async"></div>
+            <p class="plate__year">1976</p>
+            <h3 class="plate__title">The Bed Book</h3>
+            <p class="plate__by">Sylvia Plath</p>
+            <p class="plate__note">First American edition, Harper &amp; Row. The same year the Dawn Treader opened.</p>
+            <a class="plate__status" href="https://www.abebooks.com/first-edition/Bed-Book-Plath-Sylvia-Harper-Row/30608003182/bd" target="_blank" rel="noopener">Buy online</a>
+          </li>
+          <li class="plate" data-year="1993">
+            <div class="plate__art"><img src="../assets/img/books/sisters-yam.webp" alt="Sisters of the Yam, a bright red cover, displayed on a stand on the shop counter." width="900" height="1083" loading="lazy" decoding="async"></div>
+            <p class="plate__year">1993</p>
+            <h3 class="plate__title">Sisters of the Yam</h3>
+            <p class="plate__by">bell hooks</p>
+            <p class="plate__note">First edition of hooks’s book on Black women and self-recovery.</p>
+            <span class="plate__status plate__status--shop">In the shop</span>
+          </li>
+          <li class="plate" data-year="1995">
+            <div class="plate__art"><img src="../assets/img/books/independence.webp" alt="Independence Day dust jacket with a stylized American flag." width="900" height="1256" loading="lazy" decoding="async"></div>
+            <p class="plate__year">1995</p>
+            <h3 class="plate__title">Independence Day</h3>
+            <p class="plate__by">Richard Ford</p>
+            <p class="plate__note">Advance reading copy of the second Frank Bascombe novel. Alfred A. Knopf.</p>
+            <a class="plate__status" href="https://www.abebooks.com/signed-first-edition/Independence-Day-Ford-Richard-Alfred-Knopf/10117135909/bd" target="_blank" rel="noopener">Buy online</a>
+          </li>
+          <li class="plate" data-year="2003">
+            <div class="plate__art"><img src="../assets/img/books/metamorphosis-1.webp" alt="The Metamorphosis adapted by Peter Kuper, black cover with a giant insect in red and white." width="900" height="1194" loading="lazy" decoding="async"></div>
+            <p class="plate__year">2003</p>
+            <h3 class="plate__title">The Metamorphosis</h3>
+            <p class="plate__by">Franz Kafka and Peter Kuper</p>
+            <p class="plate__note">Kuper’s graphic adaptation, signed with a sketch of Gregor on the endpaper. Crown.</p>
+            <a class="plate__status" href="https://www.abebooks.com/signed-first-edition/Metamorphosis-Kafka-Franz-Kuper-Peter-Crown/32397523189/bd" target="_blank" rel="noopener">Buy online</a>
+          </li>
+          <li class="plate plate--type plate--now" data-year="2026">
+            <div class="plate__art plate__art--letter" aria-hidden="true">&amp;</div>
+            <p class="plate__year">Now</p>
+            <h3 class="plate__title">Your books</h3>
+            <p class="plate__note">We buy every day we’re open, from a bag of paperbacks to a whole library.</p>
+            <a class="plate__status" href="#selling">How selling works</a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Book of the week -->
+    <section class="week" id="week" aria-labelledby="week-title">
+      <figure class="week__photo">
+        <img src="../assets/img/books/asimov.webp" alt="Asimov’s Guide to Shakespeare standing on the shop’s wooden counter, glass-fronted bookcases and pendant lamps behind." width="1153" height="1153" loading="lazy" decoding="async">
+      </figure>
+      <div class="week__text">
+        <h2 class="section-title" id="week-title">Book of the week</h2>
+        <p class="week__date">Chosen July 27, 2026</p>
+        <h3 class="week__book"><cite>Asimov’s Guide to Shakespeare</cite></h3>
+        <p class="week__by">Isaac Asimov</p>
+        <p>Better known for science fiction, Asimov wrote this as a companion to his own Signet Classic Shakespeare. It isn’t criticism. It fills in the history, legend and myth behind all 38 plays and both narrative poems, and it groups them by where they’re set, Greek, Roman, Italian or English, rather than by comedy, history and tragedy.</p>
+        <p class="week__status">In the shop now</p>
+        <div class="week__actions">
+          <a class="btn btn--gilt" href="mailto:dawntreaderbooks@gmail.com?subject=Asimov%E2%80%99s%20Guide%20to%20Shakespeare">Ask us to hold it</a>
+          <a class="btn btn--line" href="https://shop.dawntreaderbooks.com/?page_id=111" target="_blank" rel="noopener">Read past picks</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selling books -->
+    <section class="selling" id="selling" aria-labelledby="selling-title">
+      <div class="selling__head">
+        <h2 class="section-title" id="selling-title">Shelves full? We pay cash or&nbsp;trade.</h2>
+        <p class="selling__lede">Retiring, moving or just out of room, bring your books to the shop Ann Arbor has trusted with them for over forty-five years. We buy single books, whole libraries and collections, in every subject, from early printing to this year’s titles.</p>
+        <p class="selling__small">We make offers in person, based on condition, demand and what’s already on our shelves. Clean copies without highlighting or notes are worth more. We can’t take books with mold, pest or heavy water damage.</p>
+      </div>
+
+      <div class="ways">
+        <article class="way">
+          <h3>Walk in</h3>
+          <p>Come by during opening hours. An offer often takes about 15 minutes, and up to a day for a big lot. We have a handcart and usually someone to help unload.</p>
+          <p class="way__tip">Parking out front is easiest Monday to Thursday, 11 to 4. Friday and Saturday are our busiest days. Bringing more than five boxes? Call first.</p>
+        </article>
+        <article class="way">
+          <h3>House visits</h3>
+          <p>For roughly ten boxes or more, we come to you. We usually travel within 50 miles of Ann Arbor, and have gone as far as the Upper Peninsula and Indiana for the right books.</p>
+          <p class="way__tip">We box and load everything ourselves and leave you a check the same day.</p>
+        </article>
+        <article class="way">
+          <h3>Appraisals</h3>
+          <p>Book an appointment and the owner will appraise one to five rare books free of charge.</p>
+          <p class="way__tip">You get a written note on what each book is, what it’s worth and how to look after it if you keep it.</p>
+        </article>
+      </div>
+
+      <div class="selling__actions">
+        <a class="btn btn--gilt" href="tel:+17349951008">Call 734-995-1008</a>
+        <a class="btn btn--line" href="mailto:dawntreaderbooks@gmail.com?subject=Selling%20my%20books">Email photos of your shelves</a>
+      </div>
+
+      <div class="wanted">
+        <h3 class="wanted__title">What we’re looking for right now</h3>
+        <ul class="wanted__list">
+          <li>Modern and contemporary fiction</li>
+          <li>Philosophy</li>
+          <li>Classical studies</li>
+          <li>Ancient Near East and Byzantium</li>
+          <li>Inca, Aztec and Maya civilizations</li>
+          <li>American Indian studies</li>
+          <li>Horror</li>
+          <li>Science fiction and fantasy, especially vintage mass-market paperbacks</li>
+          <li>Occult, magick, witchcraft and tarot</li>
+          <li>Spirituality</li>
+          <li>Christianity, Judaism and Islam</li>
+          <li>Eastern wisdom and philosophy</li>
+          <li>U.S. history and politics</li>
+          <li>Cultural studies</li>
+          <li>Sociology</li>
+          <li>European history</li>
+          <li>Middle Eastern history</li>
+          <li>Russian history</li>
+          <li>French history</li>
+          <li>Asian studies</li>
+          <li>Physics, engineering, chemistry, biology, geology and astronomy</li>
+          <li>Medicine: clinical, diagnostic, reference and history</li>
+          <li>Military history</li>
+          <li>Manga and anime</li>
+          <li>Graphic novels</li>
+          <li>Sheet music, musician biographies and music theory</li>
+        </ul>
+        <p class="wanted__foot">Don’t let the list stop you. Not sure? <a href="tel:+17349951008">Give us a call.</a></p>
+      </div>
+    </section>
+
+    <!-- Gift certificates: a bookplate on marbled endpaper -->
+    <section class="gift" id="gift" aria-labelledby="gift-title">
+      <svg class="gift__marble" aria-hidden="true" focusable="false" preserveAspectRatio="none" viewBox="0 0 1200 700">
+        <defs>
+          <linearGradient id="marble-bands" x1="0" y1="0" x2="1" y2="0" spreadMethod="repeat" gradientTransform="scale(.04 1)">
+            <stop offset="0" stop-color="#5a191d"/>
+            <stop offset=".2" stop-color="#5a191d"/>
+            <stop offset=".24" stop-color="#d9c08a"/>
+            <stop offset=".27" stop-color="#16362a"/>
+            <stop offset=".5" stop-color="#16362a"/>
+            <stop offset=".53" stop-color="#b8913f"/>
+            <stop offset=".56" stop-color="#241c33"/>
+            <stop offset=".78" stop-color="#241c33"/>
+            <stop offset=".81" stop-color="#e8dcc0"/>
+            <stop offset=".84" stop-color="#6e2227"/>
+            <stop offset="1" stop-color="#5a191d"/>
+          </linearGradient>
+          <filter id="marble" x="0" y="0" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.0025 0.006" numOctaves="3" seed="11" result="n"/>
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="220" xChannelSelector="R" yChannelSelector="G" result="d"/>
+            <feGaussianBlur in="d" stdDeviation=".7"/>
+          </filter>
+        </defs>
+        <rect x="-200" y="-200" width="1600" height="1100" fill="url(#marble-bands)" filter="url(#marble)"/>
+      </svg>
+
+      <div class="bookplate">
+        <p class="bookplate__ex">Ex libris</p>
+        <h2 class="bookplate__title" id="gift-title">Give an afternoon of browsing</h2>
+        <p class="bookplate__text">Gift certificates are printed on paper and sent by USPS, so allow a few days for them to arrive.</p>
+        <form class="gift__form" data-gift>
+          <fieldset>
+            <legend class="sr-only">Choose an amount</legend>
+            <label><input type="radio" name="amount" value="10"><span>$10</span></label>
+            <label><input type="radio" name="amount" value="25" checked><span>$25</span></label>
+            <label><input type="radio" name="amount" value="50"><span>$50</span></label>
+            <label><input type="radio" name="amount" value="100"><span>$100</span></label>
+          </fieldset>
+          <button class="btn btn--gilt" type="submit"><span>Buy a <span data-amount>$25</span> gift certificate</span></button>
+          <p class="gift__note" data-gift-note role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <div class="visit__main">
+        <h2 class="section-title" id="visit-title">Come and browse</h2>
+        <address class="visit__address">
+          514 East Liberty Street<br>
+          Ann Arbor, Michigan 48104
+        </address>
+        <p class="visit__contact">
+          <a href="tel:+17349951008">734-995-1008</a><br>
+          <a href="mailto:dawntreaderbooks@gmail.com">dawntreaderbooks@gmail.com</a>
+        </p>
+        <a class="btn btn--gilt" href="https://www.google.com/maps/search/?api=1&amp;query=Dawn+Treader+Book+Shop+514+E+Liberty+St+Ann+Arbor+MI" target="_blank" rel="noopener">Get directions</a>
+      </div>
+
+      <div class="visit__hours">
+        <h3>Opening hours</h3>
+        <table class="hours" data-hours>
+          <tbody>
+            <tr data-day="1"><th scope="row">Monday</th><td>11am to 8pm</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>11am to 8pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>11am to 8pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>11am to 8pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>11am to 8pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>11am to 8pm</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>11am to 6pm</td></tr>
+          </tbody>
+        </table>
+        <p class="visit__mail">Looking for a particular book? Call or email and we’ll reply with price and availability. Phone and email orders ship within one to two days, worldwide.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot__emblem" data-shape="emblem" data-fill="url(#gilt)"></div>
+    <span class="foot__mark" data-shape="wordmark-line" data-fill="url(#gilt)"></span>
+    <p class="foot__line">Used and rare books, bought and sold, since 1976.</p>
+    <p class="foot__small">© 2026 The Dawn Treader Book Shop. Book photos by the shop.</p>
+  </footer>
+
+  <aside class="concept" aria-label="Design concept">
+    <span class="concept__name">Concept A: The Rare Room</span>
+    <a href="../voyage/">See concept B</a>
+    <a href="../">Both concepts</a>
+  </aside>
+</body>
+</html>

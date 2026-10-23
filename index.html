@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Two website concepts | The Dawn Treader Book Shop</title>
+  <meta name="description" content="Two design directions for the new Dawn Treader Book Shop website: The Rare Room and The Voyage.">
+  <meta name="theme-color" content="#0b1a14">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="__SITE_URL__/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Dawn Treader Book Shop">
+  <meta property="og:title" content="Two website concepts for the Dawn Treader Book Shop">
+  <meta property="og:description" content="The Rare Room or The Voyage? Open both, on your phone and on a computer, and tell us which feels like the shop.">
+  <meta property="og:url" content="__SITE_URL__/">
+  <meta property="og:image" content="__SITE_URL__/assets/og/concepts.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Two panels: a gold ship emblem on dark green, and the ship sailing into a sunrise.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Two website concepts for the Dawn Treader Book Shop">
+  <meta name="twitter:description" content="The Rare Room or The Voyage?">
+  <meta name="twitter:image" content="__SITE_URL__/assets/og/concepts.jpg">
+
+  <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/icons/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400..600&family=IM+Fell+English:ital@0;1&display=swap">
+
+  <script defer src="assets/brand/wordmark.js"></script>
+  <script defer src="assets/brand/emblem.js"></script>
+  <script defer src="assets/brand/ship.js"></script>
+  <script defer src="assets/brand/brand.js"></script>
+
+  <style>
+    :root {
+      --green: #0b1a14;
+      --gilt: #c9a55c;
+      --vellum: #ebe0c7;
+      --night: #121735;
+      --foam: #fff5e6;
+      --sun: #f8b94c;
+      --ui: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body { font: 400 1rem/1.5 var(--ui); background: #06100c; color: var(--foam); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--sun); outline-offset: 3px; }
+
+    .top {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: max(16px, env(safe-area-inset-top)) clamp(16px, 4vw, 40px) 16px;
+      pointer-events: none;
+    }
+    .top__mark { width: 190px; color: var(--vellum); }
+    .top__mark svg { display: block; width: 100%; height: auto; }
+    .top__note { margin: 0; font-size: .9rem; color: rgba(255, 245, 230, .75); text-align: right; }
+
+    .split { display: flex; min-height: 100vh; min-height: 100svh; }
+    .panel {
+      position: relative;
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 120px clamp(20px, 4vw, 56px) clamp(32px, 6vh, 64px);
+      overflow: hidden;
+      isolation: isolate;
+      text-decoration: none;
+      transition: flex-grow .8s cubic-bezier(.2, .7, .1, 1);
+    }
+    @media (hover: hover) and (min-width: 821px) {
+      .split:hover .panel { flex-grow: .8; }
+      .split .panel:hover, .split .panel:focus-within { flex-grow: 1.25; }
+    }
+    .panel__art { position: absolute; inset: 0; z-index: -1; }
+    .panel__label { margin: 0 0 12px; font-size: .95rem; font-weight: 600; }
+    .panel__name { margin: 0; font-weight: 400; line-height: .95; letter-spacing: -.015em; }
+    .panel__desc { max-width: 30rem; margin: 18px 0 26px; font-size: 1.05rem; line-height: 1.55; }
+    .panel__go {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      min-height: 50px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform .3s, background-color .3s;
+    }
+    .panel__go:hover { transform: translateY(-2px); }
+
+    /* A: The Rare Room */
+    .panel--a { background: radial-gradient(120% 90% at 50% 100%, #14301f, var(--green) 60%); color: var(--vellum); }
+    .panel--a .panel__art::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("assets/img/scene/shelves.webp") center / cover;
+      opacity: .5;
+      -webkit-mask-image: radial-gradient(circle 46vmin at var(--lx, 50%) var(--ly, 38%), #000, rgba(0,0,0,.25) 50%, transparent 85%);
+              mask-image: radial-gradient(circle 46vmin at var(--lx, 50%) var(--ly, 38%), #000, rgba(0,0,0,.25) 50%, transparent 85%);
+    }
+    .panel--a .panel__art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(7, 18, 13, .2), rgba(7, 18, 13, .2) 40%, rgba(7, 18, 13, .92) 85%); }
+    .emblem { position: absolute; left: 50%; top: 40%; z-index: 1; width: min(46%, 300px); transform: translate(-50%, -50%); filter: drop-shadow(0 8px 30px rgba(0, 0, 0, .6)); }
+    .emblem svg { display: block; width: 100%; height: auto; }
+    .panel--a .panel__label { color: var(--gilt); font-family: "IM Fell English", Georgia, serif; font-style: italic; font-size: 1.2rem; font-weight: 400; }
+    .panel--a .panel__name { font-family: "IM Fell English", Georgia, serif; font-size: clamp(2.8rem, 2rem + 3.6vw, 5.6rem); }
+    .panel--a .panel__desc { color: rgba(235, 224, 199, .82); }
+    .panel--a .panel__go { background: var(--gilt); color: var(--green); }
+
+    /* B: The Voyage */
+    .panel--b { --h: 54%; background: linear-gradient(to bottom, #1a1f55 0%, #3f3a82 34%, #8a5b97 62%, #e0807f 86%, #f9a874 100%) top / 100% var(--h) no-repeat, #121735; color: var(--foam); }
+    .sea { position: absolute; left: 0; right: 0; top: var(--h); bottom: 0; background: linear-gradient(to bottom, #2c3066, #121735 55%); }
+    .sun { position: absolute; left: 70%; top: var(--h); width: min(40%, 280px); aspect-ratio: 1; border-radius: 50%; transform: translate(-50%, -62%);
+      background: radial-gradient(circle, #fff8dc 0 30%, #ffe08f 44%, #ffb24f 60%, rgba(255, 150, 70, 0) 71%);
+      box-shadow: 0 0 120px 60px rgba(255, 170, 90, .25);
+    }
+    .boat { position: absolute; left: 44%; top: var(--h); width: min(46%, 300px); transform: translate(-50%, -80%); color: #0a0d2a; }
+    .boat > span { display: block; animation: bob 5s ease-in-out infinite; transform-origin: 50% 85%; }
+    .boat svg { display: block; width: 100%; height: auto; }
+    @keyframes bob { 0%, 100% { transform: translateY(0) rotate(-1.4deg); } 50% { transform: translateY(5px) rotate(1.6deg); } }
+    .swell { position: absolute; left: 0; right: 0; top: calc(var(--h) + 6px); height: 40px; background: #2f3369;
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0 30 Q150 0 300 30 T600 30 T900 30 T1200 30 V60 H0Z'/%3E%3C/svg%3E") 0 0 / 600px 40px repeat-x;
+              mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0 30 Q150 0 300 30 T600 30 T900 30 T1200 30 V60 H0Z'/%3E%3C/svg%3E") 0 0 / 600px 40px repeat-x;
+    }
+    .panel--b .panel__art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 60%, rgba(12, 15, 45, .85) 92%); }
+    .panel--b .panel__label { color: var(--sun); }
+    .panel--b .panel__name { font-family: "Gloock", Georgia, serif; font-size: clamp(2.8rem, 2rem + 3.6vw, 5.6rem); }
+    .panel--b .panel__desc { color: rgba(255, 245, 230, .85); }
+    .panel--b .panel__go { background: var(--sun); color: var(--night); }
+
+    .panel__copy { position: relative; z-index: 2; }
+
+    @media (max-width: 820px) {
+      .split { flex-direction: column; }
+      .panel { min-height: 88svh; padding-top: 96px; }
+      .top__note { display: none; }
+      .emblem { top: 34%; width: min(58%, 280px); }
+      .boat { width: min(62%, 280px); }
+      .sun { width: min(52%, 240px); }
+      .panel--b { --h: 42%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .boat > span { animation: none; }
+      .panel { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <span class="top__mark" data-shape="wordmark-line" role="img" aria-label="Dawn Treader Books"></span>
+    <p class="top__note">Website concepts, October 2026.<br>Try both on your phone too.</p>
+  </header>
+
+  <main class="split">
+    <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Two website concepts for the Dawn Treader Book Shop</h1>
+
+    <section class="panel panel--a" aria-labelledby="a-name" data-lamp>
+      <div class="panel__art" aria-hidden="true">
+        <span class="emblem" data-shape="emblem" data-fill="url(#gilt)"></span>
+      </div>
+      <div class="panel__copy">
+        <p class="panel__label">Concept A</p>
+        <h2 class="panel__name" id="a-name">The Rare Room</h2>
+        <p class="panel__desc">Dark green leather, gold tooling and lamplight. The shop as a fine press book: a title page, shoulder notes, five centuries on one shelf.</p>
+        <a class="panel__go" href="rare-room/">Open the Rare Room</a>
+      </div>
+    </section>
+
+    <section class="panel panel--b" aria-labelledby="b-name">
+      <div class="panel__art" aria-hidden="true">
+        <span class="sun"></span>
+        <span class="sea"></span>
+        <span class="boat"><span data-shape="ship"></span></span>
+        <span class="swell"></span>
+      </div>
+      <div class="panel__copy">
+        <p class="panel__label">Concept B</p>
+        <h2 class="panel__name" id="b-name">The Voyage</h2>
+        <p class="panel__desc">The Dawn Treader sails from night into sunrise as you scroll, then charts a course through the shop, port by port.</p>
+        <a class="panel__go" href="voyage/">Set sail</a>
+      </div>
+    </section>
+  </main>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="gilt" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#f0d699"/><stop offset=".38" stop-color="#c9a24f"/>
+        <stop offset=".62" stop-color="#a98232"/><stop offset="1" stop-color="#d9b86d"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <script>
+    // The lamp in concept A follows the pointer
+    (function () {
+      var p = document.querySelector('[data-lamp]');
+      if (!p || !matchMedia('(pointer: fine)').matches) return;
+      p.addEventListener('pointermove', function (e) {
+        var r = p.getBoundingClientRect();
+        p.style.setProperty('--lx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%');
+        p.style.setProperty('--ly', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%');
+      });
+    })();
+  </script>
+</body>
+</html>
